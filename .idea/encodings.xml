@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/POI-EasyExcel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POI-EasyExcel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/helloworld/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/helloworld/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java_test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java_test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatisPlus-wrapper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-asynchronousAndMail/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-asynchronousAndMail/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mybatisplus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mybatisplus/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-shiro01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-shiro01/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-shiro02-start/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-shiro02-start/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_yaml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_yaml/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/storehouse/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/storehouse/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

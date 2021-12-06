@@ -1,0 +1,27 @@
+person:
+  name: chen
+  age: ${random.int}
+  happy: false
+  birth: 2019/11/02
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - music
+  dog:
+    name: ${person.name:name}_旺财
+    age: 3
+
+# chen.properties(name=chen) 使用@PropertySouce(value = "classpath:chen.properties") 在字段上 @Value("${name}")
+# 多环境配置，选择激活哪一个 dev/test   也可也使用---设置多个环境
+spring:
+  profiles:
+    active: test
+
+---
+spring:
+  profiles: dev
+---
+spring:
+  profiles: test
+#看哪些生效
+debug: true

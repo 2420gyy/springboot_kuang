@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mybatispluswrapper.mapper.StuClassMapper">
+
+    <select id="findStuClassByCid" resultMap="stuClassResultsMap">
+        select sc.cid,sc.cname,sc.sum,si.sid,si.sid,si.sname,si.age,si.course from stu_class sc,stu_info si where sc.cid = si.classid and sc.cid = #{cid}
+    </select>
+
+    <resultMap id="stuClassResultsMap" type="stuClass">
+        <id column="cid" property="cid"/>
+        <result column="cname" property="cname"/>
+        <result column="sum" property="sum"/>
+        <collection property="stuInfoList" ofType="stuInfo">
+            <id column="sid" property="sid"/>
+            <result column="sname" property="sname"/>
+            <result column="age" property="age"/>
+            <result column="course" property="course"/>
+        </collection>
+    </resultMap>
+
+</mapper>

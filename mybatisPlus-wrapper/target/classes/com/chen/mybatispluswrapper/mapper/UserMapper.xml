@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mybatispluswrapper.mapper.IUserMapper">
+
+        <!--通用查询结果列-->
+        <sql id="Base_Column_List">
+            id,name,pwd,age
+        </sql>
+
+        <select id="findUserByPwd" parameterType="user" resultType="user">
+              select
+                <include refid="Base_Column_List"/>
+              from user
+                <where>
+                  <if test="id!=null and id!=''">
+                      and id = #{id}
+                  </if>
+                  <if test="name!=null and name!=''">
+                      and name like concat('%',#{name},'%')
+                  </if>
+                  <if test="pwd!=null and pwd!=''">
+                      and pwd = #{pwd}
+                  </if>
+                    <!-- 不在if里面也可以识别 and age = 12-->
+              </where>
+        </select>
+
+        <select id="testMaybe" resultType="user">
+
+        </select>
+
+</mapper>

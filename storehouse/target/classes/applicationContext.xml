@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+
+        <context:component-scan base-package="com.lyx.service.impl,com.lyx.dao">
+        </context:component-scan>
+
+        <tx:annotation-driven/>
+
+        <!-- spring整合Mybatis -->
+        <!-- 使用属性文件配置数据源 -->
+        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="location">
+                <value>classpath:jdbcConfig.properties</value>
+            </property>
+        </bean>
+        <!--配置c3p0连接池 -->
+        <bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" >
+            <property name="jdbcUrl" value="${jdbc.url}" ></property>
+            <property name="driverClass" value="${jdbc.driver}" ></property>
+            <property name="user" value="${jdbc.username}" ></property>
+            <property name="password" value="${jdbc.password}" ></property>
+        </bean>
+        <!-- 配置SqlSessionFactory工厂 -->
+        <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+            <property name="dataSource" ref="dataSource"></property>
+            <property name="typeAliasesPackage" value="com.lyx.model"/>
+        </bean>
+        <!-- 配置Dao接口所在包的路径 -->
+        <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+            <property name="basePackage" value="com.lyx.dao"></property>
+        </bean>
+
+
+        <!-- 配置spring框架声名式事务管理 -->
+        <!-- 定义事务管理器  用于管理对数据库的一系列操作，进行统一提交或回滚，这样可以防止出现脏数据，防止数据库出现问题 -->
+        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <!-- 配置数据源 -->
+            <property name="dataSource" ref="dataSource"></property>
+        </bean>
+
+        <!-- 配置事务环绕通知 -->
+        <tx:advice id="txAdvice" transaction-manager="transactionManager">
+            <tx:attributes>
+                <!-- name:开启事务管理的方法名（可以使用通配符：* 或者 tran*）
+                propagation="REQUIRED"  : 如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。这是最常见的选择。
+                        增删改使用 REQUIRED
+                        查询使用 SUPPORTS
+                read-only="false" ：是否可读，默认false -->
+				<tx:method name="find*" propagation="SUPPORTS" read-only="true" />
+                <tx:method name="*" propagation="REQUIRED" read-only="false"/>
+            </tx:attributes>
+        </tx:advice>
+        <!-- 配置AOP切面 -->
+        <aop:config>
+            <!-- 配置切入点，及要切入哪些方法 -->
+            <aop:pointcut id="pt" expression="execution(* com.lyx.service.impl.*.*(..))"/>
+            <!-- 切面 -->
+            <aop:advisor advice-ref="txAdvice" pointcut-ref="pt"></aop:advisor>
+        </aop:config>
+
+
+
+
+</beans>

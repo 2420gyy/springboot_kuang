@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mapper.UserMapper">
+
+<!--    增-->
+    <insert id="addUser" parameterType="User">
+         insert into mybatis.user values(#{id},#{name},#{pwd},#{age})
+<!--         insert into mybatis.user (id, name, pwd, age) values (#{id},#{name},#{pwd},#{age});-->
+    </insert>
+    <!--    查-->
+    <select id="selectUserById" resultType="User">
+        select * from mybatis.user where id=#{id}
+    </select>
+    <select id="queryUserList" resultType="User">
+        select * from mybatis.user
+    </select>
+    <!--    删-->
+    <!--    这里没写参数类型，能不能成功 方法你的@Param？？？-->
+    <delete id="deleteUser">
+        delete from mybatis.user where id=#{id};
+    </delete>
+<!--    改-->
+    <update id="updateUserById" parameterType="User">
+        update mybatis.user set name=#{name},pwd=#{pwd},age=#{age} where id=#{id}
+    </update>
+
+
+</mapper>

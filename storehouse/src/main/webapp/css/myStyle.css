@@ -1,0 +1,48 @@
+#pcBox{
+    margin: 20px 0.3% 0px 0.3%;
+    border: #aaaaaa solid 1px;
+    box-shadow: #aaaaaa 5px 5px 5px 5px;
+    border-radius: 5px;
+    padding:50px 30px 50px 30px;
+}
+#userPhoto{
+    width: 55%;
+    margin-bottom: 15px;
+}
+#userPhotoBox{
+    border-right: 2px solid #5e5e5e;
+}
+#homeBox{
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 100px;
+    border: #aaaaaa solid 1px;
+    border-radius: 5px;
+    box-shadow: #aaaaaa 5px 5px 5px 5px;
+    padding: 30px;
+}
+#goodsMainBox{
+    width: 100%;
+    min-height: 550px;
+    margin-left: 0.2%;
+    border: #aaaaaa solid 1px;
+    border-radius: 5px;
+    box-shadow: #aaaaaa 5px 5px 5px 5px;
+}
+
+.goodsBox{
+    border: #cccccc solid 1px;
+    margin: 20px 5px 20px 5px;
+    padding: 5px;
+}
+.goodsBox:hover{
+    box-shadow: #aaaaaa 5px 5px 8px 5px;
+}
+.goodsImage{
+    width: 100%;
+    height: 200px;
+    margin: 5px 0px 5px 0px;
+}
+#findGoodInputBox{
+    padding-top: 2%;
+}

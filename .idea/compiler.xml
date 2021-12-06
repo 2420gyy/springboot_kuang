@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="helloworld" />
+        <module name="POI-EasyExcel" />
+        <module name="springboot-mybatisplus" />
+        <module name="springboot-asynchronousAndMail" />
+        <module name="springboot-shiro01" />
+        <module name="springboot_yaml" />
+        <module name="provider-server" />
+        <module name="springboot_data" />
+        <module name="storehouse" />
+        <module name="java_test" />
+        <module name="springboot-shiro02-start" />
+        <module name="consumer-server" />
+        <module name="mybatisPlus-wrapper" />
+        <module name="springboot-mybatis" />
+        <module name="springboot-security" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumer-server" target="1.8" />
+      <module name="helloworld" target="1.8" />
+      <module name="java_test" target="1.8" />
+      <module name="mybatisPlus-wrapper" target="1.8" />
+      <module name="POI-EasyExcel" target="1.8" />
+      <module name="provider-server" target="1.8" />
+      <module name="springboot-asynchronousAndMail" target="1.8" />
+      <module name="springboot-mybatis" target="1.8" />
+      <module name="springboot-mybatisplus" target="1.8" />
+      <module name="springboot-security" target="1.8" />
+      <module name="springboot-shiro01" target="1.8" />
+      <module name="springboot-shiro02-start" target="1.8" />
+      <module name="springboot_data" target="1.8" />
+      <module name="springboot_yaml" target="1.8" />
+      <module name="springcloudalibaba" target="1.8" />
+      <module name="ssm-crud-atguigu" target="1.8" />
+      <module name="storehouse" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="helloworld" options="-parameters" />
+      <module name="mybatisPlus-wrapper" options="-parameters" />
+      <module name="provider-server" options="-parameters" />
+      <module name="springboot-asynchronousAndMail" options="-parameters" />
+      <module name="springboot-mybatis" options="-parameters" />
+      <module name="springboot-mybatisplus" options="-parameters" />
+      <module name="springboot-security" options="-parameters" />
+      <module name="springboot-shiro02-start" options="-parameters" />
+      <module name="springboot_data" options="-parameters" />
+      <module name="springboot_yaml" options="-parameters" />
+    </option>
+  </component>
+</project>

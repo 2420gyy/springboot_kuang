@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/storehouse" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_yaml/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_data/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mybatisplus/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-security/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-shiro01/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-shiro02-start/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisPlus-wrapper/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-asynchronousWork/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-asynchronousAndMail/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-server/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-server/pom.xml" />
+        <option value="$PROJECT_DIR$/java_test/pom.xml" />
+        <option value="$PROJECT_DIR$/POI-EasyExcel/pom.xml" />
+        <option value="$PROJECT_DIR$/storehouse/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/DeBugTest" />
+  </component>
+</project>
