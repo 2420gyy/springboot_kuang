@@ -5,6 +5,8 @@ package com.chen.尚硅谷.泛型;
  * @date 2021-12-05 13:19
  */
 
+import com.chen.尚硅谷.泛型.pojo.SubOrder;
+import com.chen.尚硅谷.泛型.pojo.SubOrder1;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;

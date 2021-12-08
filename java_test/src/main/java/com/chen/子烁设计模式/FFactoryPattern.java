@@ -11,7 +11,6 @@ package com.chen.子烁设计模式;
 public class FFactoryPattern {
 
     public static void main(String[] args) {
-
     }
 
 }

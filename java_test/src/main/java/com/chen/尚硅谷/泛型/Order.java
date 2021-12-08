@@ -15,7 +15,7 @@ public class Order<T> {
     T orderT;
 
     public Order() {
-        // 必须加强转，编译可通过
+        // 必须加强转，编译可通过,编译和运行状态，大坑
         // T[] arr = (T[]) new Object();
     }
 
