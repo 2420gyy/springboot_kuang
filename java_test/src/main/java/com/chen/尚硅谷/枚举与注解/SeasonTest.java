@@ -32,13 +32,30 @@ public class SeasonTest {
         // valueOf ...
         System.out.println(PunishBaseTypeEnum.valueOf("COMMON")); // COMMON
 
-
+        // 实现接口，重写
+        // 每个对象都输出不同的值，每个对象都可以重写接口中的抽象方法
+        PunishBaseTypeEnum.EASY.show(); // 01-普通程序
     }
 }
-enum PunishBaseTypeEnum{
+
+interface Info{
+    void show();
+}
+
+enum PunishBaseTypeEnum implements Info{
     // 1.枚举类的对象，用逗号分隔
-    COMMON("01","普通程序"),
-    EASY("02","简易程序");
+    COMMON("01","普通程序"){
+        @Override
+        public void show() {
+            System.out.println("01-普通程序");
+        }
+    },
+    EASY("02","简易程序"){
+        @Override
+        public void show() {
+            System.out.println("02-简易程序");
+        }
+    };
 
     // 2.声明对象的属性
     private String code;
@@ -56,6 +73,11 @@ enum PunishBaseTypeEnum{
     public String getValue() {
         return value;
     }
+
+    // @Override
+    // public void show() {
+    //     System.out.println("base接口");
+    // }
 }
 
 class Season{

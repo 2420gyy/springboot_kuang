@@ -5,6 +5,8 @@ package com.chen.尚硅谷.泛型;
  * @date 2021-12-05 13:19
  */
 
+import com.chen.尚硅谷.泛型.pojo.GPerson;
+import com.chen.尚硅谷.泛型.pojo.GStudent;
 import com.chen.尚硅谷.泛型.pojo.SubOrder;
 import com.chen.尚硅谷.泛型.pojo.SubOrder1;
 import org.junit.jupiter.api.Test;
@@ -109,6 +111,15 @@ public class GenericTest implements OrderInter<Integer>{
         Integer[] arr = new Integer[]{1,2,3,4};
         List<Integer> integers = order.copyFromArrayToList(arr);
         System.out.println(integers);
+    }
+    @Test
+    public void test7(){
+        GPerson gPerson = new GStudent();
+        gPerson.GP();
+        gPerson.GP2();
+        new GStudent().GP2();
+        GStudent student = new GStudent();
+        student.GS();
     }
 
 

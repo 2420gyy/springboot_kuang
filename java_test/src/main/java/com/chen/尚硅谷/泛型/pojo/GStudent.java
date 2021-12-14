@@ -10,7 +10,7 @@ public class GStudent extends GPerson{
 
     @Override
     public void GP() {
-        super.GP();
+        // super.GP();
         System.out.println("子类继承父类的方法");
     }
 

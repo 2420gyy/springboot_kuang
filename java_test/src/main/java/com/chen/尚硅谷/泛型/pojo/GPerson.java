@@ -16,4 +16,11 @@ public class GPerson {
     public void GP(){
         System.out.println("GPerson的方法");
     }
+    public void GP2(){
+        System.out.println("GPerson的第二个方法");
+    }
+    private void GPSs(){
+        System.out.println("GPerson的私有方法");
+    }
+
 }
