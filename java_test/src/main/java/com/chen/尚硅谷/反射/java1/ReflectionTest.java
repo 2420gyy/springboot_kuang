@@ -2,7 +2,8 @@ package com.chen.尚硅谷.反射.java1;
 
 
 import org.junit.jupiter.api.Test;
-
+import com.chen.尚硅谷.反射.pojo.*;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -126,6 +127,13 @@ public class ReflectionTest {
         //2.保证此构造器是可访问的
         constructor.setAccessible(true);
 
+        for (Annotation annotation : constructor.getAnnotations()) {
+            MyAnnotation annotation1 = (MyAnnotation) annotation;
+            System.out.println(annotation1.value());
+            System.out.println(annotation);
+        }
+
+        System.out.println("=========");
         //3.调用此构造器创建运行时类的对象
         Person per = (Person) constructor.newInstance("Tom");
         System.out.println(per);

@@ -5,7 +5,10 @@ import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
 import com.chen.pojo.Student;
 import org.junit.jupiter.api.Test;
+import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 
+import java.text.SimpleDateFormat;
 import java.util.Map;
 
 /**
@@ -37,6 +40,37 @@ public class JSON和JS对象互转 {
         System.out.println("这个是用JSON类的parseObject来解析JSON字符串!!!");
         for (Object obj : mapTypes.keySet()){
             System.out.println("key为："+obj+" 值为："+mapTypes.get(obj));
+        }
+    }
+
+    @Test
+    public void test(){
+        String a = "0526b38c-5222-43be-a1e1-d094e5ab8539";
+        System.out.println(a.length());
+        java.util.Date date1 = new java.util.Date();
+        SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss");
+        System.out.println(date1);
+        System.out.println(ft.format(date1));
+
+
+        ZfPunishStaffBO person = new ZfPunishStaffBO();
+        // List<ZfPunishStaffBO> person=null;
+        person.setPersonId("");
+        person.setPersonCode("");
+        person.setPersonName("");
+        person.setId("");
+        System.out.println(person);
+        if(ObjectUtils.isEmpty(person)){
+            System.out.println("aaa");
+        }
+        if(person.getId()==""){
+            System.out.println("sssssss");
+        }
+        if(person.getId().equals("")){
+            System.out.println("pppppppppp");
+        }
+        if(StringUtils.isEmpty(person)){
+            System.out.println("ccc");
         }
     }
 }

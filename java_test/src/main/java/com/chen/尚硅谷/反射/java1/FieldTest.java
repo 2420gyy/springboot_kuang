@@ -1,5 +1,6 @@
 package com.chen.尚硅谷.反射.java1;
 
+import com.chen.尚硅谷.反射.pojo.Person;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
@@ -23,8 +24,9 @@ public class FieldTest {
         for(Field f : fields){
             System.out.println(f);
         }
-        System.out.println();
+        System.out.println("===========");
 
+        // Declare 声明
         //getDeclaredFields():获取当前运行时类中声明的所有属性。（不包含父类中声明的属性）
         Field[] declaredFields = clazz.getDeclaredFields();
         for(Field f : declaredFields){

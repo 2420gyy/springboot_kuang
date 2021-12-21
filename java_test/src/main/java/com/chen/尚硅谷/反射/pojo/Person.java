@@ -1,11 +1,15 @@
-package com.chen.尚硅谷.反射.java1;
+package com.chen.尚硅谷.反射.pojo;
+
+import com.chen.尚硅谷.反射.java1.Creature;
+import com.chen.尚硅谷.反射.java1.MyAnnotation;
+import com.chen.尚硅谷.反射.java1.MyInterface;
 
 /**
  * @author shkstart
  * @create 2019 下午 3:12
  */
 @MyAnnotation(value="hi")
-public class Person extends Creature<String> implements Comparable<String>,MyInterface{
+public class Person extends Creature<String> implements Comparable<String>, MyInterface {
 
     private String name;
     int age;

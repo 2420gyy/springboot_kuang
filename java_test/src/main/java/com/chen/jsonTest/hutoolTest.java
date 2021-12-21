@@ -10,6 +10,7 @@ import cn.hutool.json.JSONUtil;
  */
 public class hutoolTest {
     public static void main(String[] args) {
+
         String jsonStr1 = "{\"key\": 'value',\"key2\": 123,\"key3\": {\"name\": '啊',\"qq\": 12345},\"key4\": [1,2,3]}";
         JSONObject jsonObject = JSONUtil.parseObj(jsonStr1);
         System.out.println(jsonObject);

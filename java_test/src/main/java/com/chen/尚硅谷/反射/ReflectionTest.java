@@ -37,7 +37,7 @@ public class ReflectionTest {
         Constructor constructor = clazz.getConstructor(String.class, int.class);
         // 多态的形式
         Object tom = constructor.newInstance("tom", 12);
-        // 可用强转 TODO 转型的问题
+        // 可用强转
         System.out.println(tom);
         // 2.通过反射，调用对象指定的属性、方法
         Field age = clazz.getDeclaredField("age");

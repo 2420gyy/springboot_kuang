@@ -1,12 +1,15 @@
 package com.chen.尚硅谷.反射.java1;
 
 
+import com.chen.尚硅谷.反射.pojo.Person;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 /**
  * @author shkstart
@@ -76,6 +79,7 @@ public class OtherTest {
         //获取泛型类型
         Type[] actualTypeArguments = paramType.getActualTypeArguments();
 //        System.out.println(actualTypeArguments[0].getTypeName());
+        // class实现了Type接口 向下转型
         System.out.println(((Class)actualTypeArguments[0]).getName());
     }
 
@@ -123,6 +127,34 @@ public class OtherTest {
         for(Annotation annos : annotations){
             System.out.println(annos);
         }
+    }
+    // 获取注解的属性
+    @SneakyThrows
+    @Test
+    public void test8(){
+        Class clazz = Person.class;
+        // Annotation annotation1 = clazz.getAnnotation(MyAnnotation.class);
+        for (Annotation annotation : clazz.getAnnotations()) {
+            MyAnnotation annotation1 = (MyAnnotation) annotation;
+            System.out.println(annotation1.value());
+            System.out.println(annotation);
+        }
+
+    }
+    @Test
+    public void test9(){
+        int num = 6;
+        String code = "5426";
+        String format = String.format("%06d", Integer.parseInt(code));
+        System.out.println(format);
+        ArrayList<String> a = new ArrayList<>();
+        a.add("a");
+        a.add("b");
+        a.add("c");
+        System.out.println(a);
+        a.remove(0);
+        a.remove(0);
+        System.out.println(a);
     }
 
 }
