@@ -19,18 +19,21 @@
         <module name="java_test" />
         <module name="springboot-shiro02-start" />
         <module name="consumer-server" />
+        <module name="shiro01" />
         <module name="mybatisPlus-wrapper" />
         <module name="springboot-mybatis" />
         <module name="springboot-security" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bz_shiro" target="1.8" />
       <module name="consumer-server" target="1.8" />
       <module name="helloworld" target="1.8" />
       <module name="java_test" target="1.8" />
       <module name="mybatisPlus-wrapper" target="1.8" />
       <module name="POI-EasyExcel" target="1.8" />
       <module name="provider-server" target="1.8" />
+      <module name="shiro01" target="1.8" />
       <module name="springboot-asynchronousAndMail" target="1.8" />
       <module name="springboot-mybatis" target="1.8" />
       <module name="springboot-mybatisplus" target="1.8" />

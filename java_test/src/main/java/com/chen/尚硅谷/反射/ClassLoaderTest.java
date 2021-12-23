@@ -1,7 +1,10 @@
 package com.chen.尚硅谷.反射;
 
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
@@ -60,8 +63,13 @@ public class ClassLoaderTest {
         String user = properties.getProperty("user");
         String password = properties.getProperty("password");
         System.out.println(user+password);
-
-
-
+    }
+    @SneakyThrows
+    @Test
+    public void test22(){
+        BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream("../helloworld/s.txt"));
+        byte[] bytes = new byte[1024];
+        bufferedInputStream.read(bytes);
+        System.out.println(new String(bytes));
     }
 }

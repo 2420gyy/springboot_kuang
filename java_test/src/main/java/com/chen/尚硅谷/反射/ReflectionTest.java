@@ -141,5 +141,15 @@ public class ReflectionTest {
         System.out.println(c10 == c11);
 
     }
+    @Test
+    public void test22(){
+        String a = "2888";
+        Integer s  = 2888;
+        int i = Integer.parseInt(a);
+        // String.valueOf(s)
+        if(i == s){
+            System.out.println("ssssssssss");
+        }
+    }
 
 }
