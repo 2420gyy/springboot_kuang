@@ -28,8 +28,8 @@ public class ShiroConfig {
         anon 无需认证就可以认证
         authc 必须认证了才能访问
         user 必须有记住我功能
-        params 拥有某个资源的的权限才能访问
-        role 拥有某个角色权限才能访问
+        perams 拥有某个资源的的权限才能访问
+        roles 拥有某个角色权限才能访问
          */
         Map<String, String> filterMap = new LinkedHashMap<>();
         //授权

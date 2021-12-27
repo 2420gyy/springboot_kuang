@@ -18,4 +18,8 @@ public interface IUserService extends IService<User> {
     List<User> testMaybe(User user);
 
     Map<String, Object> testAboutTime(String birth);
+
+    List<User> findUserByLikeName(String inputValue);
+
+    List<User> findUserByUser(User user);
 }

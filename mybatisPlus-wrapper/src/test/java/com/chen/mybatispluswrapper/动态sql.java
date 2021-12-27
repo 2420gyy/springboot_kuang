@@ -61,6 +61,20 @@ public class 动态sql {
             System.out.println(iterator.next());
         }
     }
+    @Test
+    public void testBind(){
+        String inputValue = "xiao";
+        List<User> userList = userService.findUserByLikeName(inputValue);
+        userList.forEach(System.out::println);
+
+        System.out.println("========================");
+        User user = new User();
+        user.setName("xiao");
+
+        List<User> user1 = userService.findUserByUser(user);
+        user1.stream().forEach(System.out::println);
+    }
+
 
 
 }

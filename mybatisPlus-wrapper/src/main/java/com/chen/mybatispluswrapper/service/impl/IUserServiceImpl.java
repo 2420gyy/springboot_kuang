@@ -33,6 +33,17 @@ public class IUserServiceImpl extends ServiceImpl<IUserMapper, User> implements 
         return result;
     }
 
+    @Override
+    public List<User> findUserByLikeName(String inputValue) {
+        List<User> userList = baseMapper.findUserByLikeName(inputValue);
+        return userList;
+    }
+
+    @Override
+    public List<User> findUserByUser(User user) {
+        return baseMapper.findUserByUser(user);
+    }
+
     @Autowired
     private IUserMapper userMapper;
 

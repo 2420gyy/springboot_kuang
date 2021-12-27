@@ -28,5 +28,13 @@
         <select id="testMaybe" resultType="user">
 
         </select>
+    <select id="findUserByLikeName" resultType="com.chen.mybatispluswrapper.entity.User">
+        <bind name="name" value="'%'+ inputValue + '%'"/>
+        select * from user where name like #{name}
+    </select>
+    <select id="findUserByUser" resultType="com.chen.mybatispluswrapper.entity.User">
+        <bind name="inputValue" value="'%'+ name + '%'"/>
+        select * from user where name like #{inputValue}
+    </select>
 
 </mapper>

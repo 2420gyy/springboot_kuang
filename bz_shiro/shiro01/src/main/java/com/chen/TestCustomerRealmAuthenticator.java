@@ -17,7 +17,7 @@ import org.apache.shiro.subject.Subject;
  * 认证
  *
   */
-public class TestCustomerRealAuthenticator {
+public class TestCustomerRealmAuthenticator {
     public static void main(String[] args) {
         //
         DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();

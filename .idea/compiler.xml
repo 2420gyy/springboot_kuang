@@ -21,6 +21,7 @@
         <module name="consumer-server" />
         <module name="shiro01" />
         <module name="mybatisPlus-wrapper" />
+        <module name="springboot_jsp_shirp" />
         <module name="springboot-mybatis" />
         <module name="springboot-security" />
       </profile>
@@ -41,6 +42,7 @@
       <module name="springboot-shiro01" target="1.8" />
       <module name="springboot-shiro02-start" target="1.8" />
       <module name="springboot_data" target="1.8" />
+      <module name="springboot_jsp_shirp" target="1.8" />
       <module name="springboot_yaml" target="1.8" />
       <module name="springcloudalibaba" target="1.8" />
       <module name="ssm-crud-atguigu" target="1.8" />
