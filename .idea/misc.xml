@@ -27,10 +27,26 @@
         <option value="$PROJECT_DIR$/storehouse/pom.xml" />
         <option value="$PROJECT_DIR$/bz_shiro/pom.xml" />
         <option value="$PROJECT_DIR$/bz_shiro/springboot_jsp_shirp/pom.xml" />
+        <option value="$PROJECT_DIR$/bz_shiro/shiro_boot02Test/pom.xml" />
+        <option value="$PROJECT_DIR$/bz_shiro/springboot-Jedis/pom.xml" />
+        <option value="$PROJECT_DIR$/bz_shiro/springboot_shiro_mytest/pom.xml" />
+        <option value="$PROJECT_DIR$/bz_shiro/springboot_dbLearning_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/bootstrap/pom.xml" />
+        <option value="$PROJECT_DIR$/vue-bootstrap/pom.xml" />
+        <option value="$PROJECT_DIR$/SQL-Learning/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_redis_sensitive_word/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/DeBugTest" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+  <component name="com.itcodebox.notebooks.projectservice.ProjectUIState">
+    <option name="selectedNotebookId" value="2" />
+    <option name="selectedChapterId" value="2" />
+    <option name="selectedNoteId" value="2" />
   </component>
 </project>

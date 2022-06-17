@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .app{
+            background-color: darkolivegreen;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="app" @click="btn1">
+<!--            点击内部的btn会触发父元素的事件，使用stop阻止冒泡-->
+            <button @click.stop="btn">按钮</button>
+        </div>
+<!--        prevent 阻止默认事件-->
+        <a href="https://www.baidu.com/" @click.prevent="btn3">百度</a>
+<!--        self 用来针对当前标签的事件触发 -->
+<!--        div的事件不监听事件冒泡/只关心自己的响应-->
+<!--        once 让指定的事件只触发一次 -->
+    </div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app", // element 给vue实例定义一个作用范围
+        data:{     // 给vue实例定义一些相关数据
+
+        },
+        methods: {
+            btn(){
+                alert("btn被点击了")
+            },
+            btn1(){
+                alert("div被点击了")
+            },
+            btn3(){
+                alert("a被点击了")
+            }
+        }
+    });
+</script>

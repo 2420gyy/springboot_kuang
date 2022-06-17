@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!-- v-show 可以直接使用布尔值和变量来控制 / 底层通过控制元素的display属性来进行标签的控制-->
+    <h2 v-show="false">测试1</h2>
+    <h2 v-show="true">测试2</h2>
+    <h2 v-show="show">测试3</h2>
+<!--    v-on:click / @click -->
+<!--    不能用show-->
+    <button type="button" @click="show = !show">展示/关闭</button>
+
+<!--    v-if 是通过操作DOM元素实现的控制-->
+    <h2 v-if="show">测试v-if</h2>
+
+    <hr>
+<!--    v-bind 用来绑定标签的属性从而通过vue动态修改标签的属性-->
+<!--    语法糖 v-bind:属性 :属性 -->
+<!--    v-bind:title="title"-->
+
+
+</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app",
+        data:{
+            msg:23,
+            count:1,
+            show:true
+        },
+        methods:{
+            shows(){
+                this.show = !this.show;
+            }
+
+        }
+
+    })
+</script>

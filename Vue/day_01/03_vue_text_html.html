@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--    类似innerHtml / innerText-->
+<!--    插值表达式会出现插值闪烁 使用v-text可以解决-->
+    <h2>{{msg}}</h2>
+<!--    text 会覆盖原有的值-->
+    <span v-text="msg">ss</span>
+<!--    html解析  text直接显示-->
+    <h4 v-html="url"></h4>
+    <h4 v-text="url"></h4>
+</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app",
+        data:{
+            msg:"hello vue",
+            url:'<a href="http://www.baidu.com">百度一下</a>'
+        }
+
+    })
+</script>

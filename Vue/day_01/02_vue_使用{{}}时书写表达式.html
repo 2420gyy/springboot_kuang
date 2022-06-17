@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--    可以书写表达式、运算符、调用相关方法-->
+    <h1>{{msg + '!'}}</h1>
+    <h1>{{msg.toUpperCase()}}</h1>
+</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data:{
+            msg: "hello vue"
+        }
+    });
+</script>

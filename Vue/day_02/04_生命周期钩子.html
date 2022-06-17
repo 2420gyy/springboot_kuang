@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <span id="sp">{{msg}}</span>
+    <input type="button" @click="changeDate">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script>
+
+    const  app = new Vue({
+        el: "#app",
+        data:{
+            msg:'百知教育',
+            list:['页面初始化的时候就可以加载列表']
+        },
+        methods:{
+            changeDate(){
+                this.msg = "进行修改"
+            }
+        },
+        //
+        beforeCreate(){ // 1.生命周期中的第一个函数，vue实例中还没有el，data，methods
+            console.log("beforeCreate"+this.msg);
+        },
+        created(){ // 2.生命周期的第二个函数
+            console.log("created"+this.msg);
+            this.list = axios.get();
+        },
+        beforeMount(){ // 3.vue将el中指定的作用范围作为模板编译 还没有进行替换
+            var elementById = document.getElementById("sp").innerText;
+            console.log(elementById);
+        },
+        mounted(){ // 4.vue的数据被渲染和替换到界面中
+            var elementById = document.getElementById("sp").innerText;
+            console.log(elementById);
+        },
+        // 运行阶段
+        beforeUpdate(){ //5.data数据变化时执行,页面还没有更新
+            var elementById = document.getElementById("sp").innerText;
+            console.log("beforeUpdate"+elementById);
+            console.log("beforeUpdate"+this.msg);
+        },
+        updated(){ //6.该函数执行时,data数据发生变化,页面中的数据也发生了变化
+            console.log("updated"+this.msg);
+        },
+        // 销毁阶段
+        beforeDestory(){},
+        destroyed(){}
+    })
+</script>
+
+</body>
+</html>

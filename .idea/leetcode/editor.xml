@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LeetcodeEditor">
+    <option name="projectConfig">
+      <map>
+        <entry key="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[1576]替换所有的问号.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/doc/content/[1576]替换所有的问号.md" />
+              <option name="path" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[1576]替换所有的问号.java" />
+              <option name="questionId" value="1698" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[1614]括号的最大嵌套深度.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/doc/content/[1614]括号的最大嵌套深度.md" />
+              <option name="path" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[1614]括号的最大嵌套深度.java" />
+              <option name="questionId" value="1737" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

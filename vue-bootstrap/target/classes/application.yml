@@ -1,0 +1,16 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 9999
+#magic-api:
+#  web: /magic/web
+##配置文件存储位置。当以classpath开头时，为只读模式
+#  resource:
+#    location: F:/data/magic-api
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

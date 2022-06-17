@@ -1,0 +1,7 @@
+{
+  "name": "springboot_狂神",
+  "version": "1.0.0",
+  "dependencies": {
+    "axios": "^0.25.0"
+  }
+}

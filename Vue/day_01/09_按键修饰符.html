@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div id="app">
+<!--        与键盘中的按键绑定-->
+<!--        https://cn.vuejs.org/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6-->
+
+        <input type="text" @keyup.enter="keyups">
+        <input type="text" @keyup.space="keyups">
+
+
+
+    </div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app", // element 给vue实例定义一个作用范围
+        data:{     // 给vue实例定义一些相关数据
+
+        },
+        methods: {
+            keyups(){
+                alert("键盘抬起")
+            }
+        }
+    });
+</script>

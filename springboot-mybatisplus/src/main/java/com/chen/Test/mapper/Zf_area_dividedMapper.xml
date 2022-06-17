@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.Test.mapper.Zf_area_dividedMapper">
+
+    <resultMap id="ZfAreaDividedVOMap" type="com.chen.Test.vo.ZfAreaDividedVO">
+        <id column="ID" property="id" />
+        <result column="ADMIN_DIVISION_CODE" property="adminDivisionCode" />
+        <result column="LEVEL_CODE" property="levelCode" />
+        <result column="ADMIN_DIVISION_NAME" property="adminDivisionName" />
+    </resultMap>
+
+    <select id="selectAllProvincial" resultMap="ZfAreaDividedVOMap">
+        SELECT
+            ID,
+            ADMIN_DIVISION_CODE,
+            ADMIN_DIVISION_NAME,
+            LEVEL_CODE
+        FROM
+            zf_area_divided
+        WHERE
+            LEVEL_CODE = '02'
+        ORDER BY
+            ADMIN_DIVISION_CODE
+    </select>
+    <select id="selectAllCity" resultMap="ZfAreaDividedVOMap">
+        SELECT
+            ID,
+            ADMIN_DIVISION_CODE,
+            ADMIN_DIVISION_NAME,
+            LEVEL_CODE
+        FROM
+            zf_area_divided
+        WHERE
+            LEVEL_CODE = '03'
+        ORDER BY
+            ADMIN_DIVISION_CODE
+    </select>
+    <select id="selectAllDistrict" resultMap="ZfAreaDividedVOMap">
+        SELECT
+            ID,
+            ADMIN_DIVISION_CODE,
+            ADMIN_DIVISION_NAME,
+            LEVEL_CODE
+        FROM
+            zf_area_divided
+        WHERE
+            LEVEL_CODE = '04'
+        ORDER BY
+            ADMIN_DIVISION_CODE
+    </select>
+</mapper>

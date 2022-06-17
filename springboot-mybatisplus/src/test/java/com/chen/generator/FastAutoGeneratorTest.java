@@ -31,7 +31,7 @@ public class FastAutoGeneratorTest {
                 })
                 // 策略配置
                 .strategyConfig(builder -> {
-                    builder.addInclude("s_treenode");
+                    builder.addInclude("zf_area_divided");
                 })
                 .execute();
     }

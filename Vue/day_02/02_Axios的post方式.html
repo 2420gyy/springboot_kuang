@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+
+    /*
+    function getUserAccount() {
+    return axios.get('/user/12345');
+}
+
+    function getUserPermissions() {
+    return axios.get('/user/12345/permissions');
+}
+
+    Promise.all([getUserAccount(), getUserPermissions()])
+    .then(function (results) {
+    const acct = results[0];
+    const perm = results[1];
+  });
+     */
+    // const axios = require('axios');
+
+    // 向给定ID的用户发起请求
+    axios.post('http://localhost:8888/user/save', {
+        id:1,
+        name:"xiaochen",
+        })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+    const  app = new Vue({
+        el: "#app",
+        data:{
+
+        },
+        methods:{
+
+        }
+    })
+</script>
+
+</body>
+</html>

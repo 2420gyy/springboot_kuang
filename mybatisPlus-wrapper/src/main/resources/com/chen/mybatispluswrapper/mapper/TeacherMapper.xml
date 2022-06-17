@@ -2,4 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chen.mybatispluswrapper.mapper.TeacherMapper">
 
+    <select id="test" resultType="com.chen.mybatispluswrapper.entity.Teacher">
+        select * from teacher where name like concat('%',#{tName},'%') and id = #{tid};
+    </select>
+    <select id="test2" resultType="com.chen.mybatispluswrapper.vo.TeacherVO">
+        select t.*,s.name as sName  from teacher t,student s
+        where t.id = #{teacher1.id} and t.name like concat('%',#{teacher1.name},'%')
+          and s.name like concat('%',#{sName},'%');
+    </select>
+    <select id="test1" resultType="com.chen.mybatispluswrapper.entity.Teacher">
+        select * from teacher where name like concat('%',#{laoshi},'%') and
+            name like concat('%',#{li},'%');
+    </select>
+    <select id="test0" resultType="com.chen.mybatispluswrapper.entity.Teacher">
+        select * from teacher where id = #{tId}
+    </select>
 </mapper>

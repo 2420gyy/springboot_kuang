@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div id="app">
+<!--        :value="msg"(绑定) 和  v-model="msg"  ？？？ TODO-->
+        <input type="text" v-model="msg"/><button type="button" @click="save(msg)">添加到记事本</button>
+        <ul>
+            <li v-for="(m,index) in messages" :value="messages">{{index+1}} {{m}} <button @click="deleteOne(index)">删除</button></li>
+        </ul>
+        <h3>总数量:{{this.messages.length}}条</h3>
+        <button type="button" v-show="this.messages.length==0?false:true" @click="deleteAll">删除所有</button>
+    </div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app", // element 给vue实例定义一个作用范围
+        data:{     // 给vue实例定义一些相关数据
+            messages:['火影忍者','海贼王'],
+            msg:""
+        },
+        methods:{
+            save(msg1){
+                // this.messages[this.messages.length+1] = msg1
+                if(msg1!=null && msg1!=''){
+                this.messages.push(msg1)
+                this.msg = ''
+                }
+            },
+            deleteOne(index){
+                // this.messages[index] = ''
+                this.messages.pop(index)
+            },
+            deleteAll(){
+                this.messages = []
+            }
+        }
+    });
+</script>

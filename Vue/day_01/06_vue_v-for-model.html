@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ui>
+        <li v-for="(name,index) in names">{{index+1}}{{name}}</li>
+    </ui>
+    <hr>
+    <li v-for="name in names">{{name}}</li>
+<!--    value-key-index 格式-->
+    <li v-for="(m,n,index) in info">{{m}}-{{n}}-{{index}}</li>
+
+
+<!--    v-bind:key="user.name" vue内部做重用和排序-->
+    <ul>
+        <li v-for="user in users" v-bind:key="user.name">{{user.name}}-{{user.age}}</li>
+    </ul>
+
+<!--    双向绑定 -->
+    <hr>
+    <span>{{flag}}</span>
+    <input v-model:value="flag">
+
+    <hr>
+    <span>{{flag}}</span>
+    <button type="button" value="改变值" @click="change">改变值</button>
+
+</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app",
+        data:{
+            flag:12,
+            names:['james','kobe','carry'],
+            info:{
+                age:18,
+                name:'why',
+                height:1.8
+            },
+            users: [
+                {name:'a',age:12},
+                {name: 'b',age:23},
+                {name: 'c',age:24}
+            ]
+        },
+        methods:{
+            change(){
+                this.flag = '测试'
+            }
+
+        }
+
+    })
+</script>

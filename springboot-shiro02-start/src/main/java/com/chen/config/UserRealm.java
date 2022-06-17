@@ -37,8 +37,11 @@ public class UserRealm extends AuthorizingRealm {
         Subject subject= SecurityUtils.getSubject();
         // 拿到User对象
         User currentUser= (User) subject.getPrincipal();
-        // 设置当前用户对象
+        // 设置当前用户对象的权限
         info.addStringPermission(currentUser.getPerms());
+        // 用户-多角色-多权限
+        // 基于角色授权
+        // info.addRole();
         return info;
     }
     /**

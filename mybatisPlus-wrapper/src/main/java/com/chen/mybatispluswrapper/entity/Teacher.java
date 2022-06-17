@@ -20,6 +20,13 @@ public class Teacher implements Serializable {
 
     private String name;
 
+    public Teacher() {
+    }
+
+    public Teacher(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Integer getId() {
         return id;

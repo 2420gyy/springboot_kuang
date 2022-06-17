@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div id="app">
+        {{user}} | {{user.name}} - {{user.age}}
+        <span>
+            {{list}}|{{list[0]}}
+        </span><br>
+        <span>
+            {{users[0].name}}
+        </span>
+    </div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app", // element 给vue实例定义一个作用范围
+        data:{     // 给vue实例定义一些相关数据
+            msg:"你好",
+            username:"hello",
+            // 对象/数组/
+            user:{
+                name:"张三",
+                age: 19
+            },
+            list:["a","b","c",23],
+            users:[{name:"李四",age:23},{name:"李四1",age:24}]
+        }
+    });
+</script>

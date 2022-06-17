@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--    缓存很烦人-->
+    <input type="text" v-model="msg" @keyup.enter="keyenter">&nbsp;
+    <input type="button" style="font-size: 3px;"  @click="findW" value="搜索"/><br>
+    <span v-for="item in hostCity">
+        <a href="" @click.prevent="searchCitys(item)">{{item}}</a>&nbsp;
+    </span>
+    <hr>
+    <span v-show="msg!=''">今天{{msg}}的天气是: {{res}}</span>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data:{
+            msg:'',
+            res:'',
+            hostCity:['北京','上海','广州','武汉']
+        },
+        methods:{
+            findW(){
+                console.log("-------")
+                this.keyenter();
+            },
+            keyenter(){
+                console.log("---222----")
+                axios.get("http://localhost:8888/city/find?name="+this.msg).then(res=>{
+                    this.res = res.data;
+                })
+            },
+            searchCitys(val){
+                    this.msg = val;
+                    this.findW();
+            }
+        }
+    })
+</script>
+</body>
+</html>
