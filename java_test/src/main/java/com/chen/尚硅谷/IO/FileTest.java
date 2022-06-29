@@ -14,7 +14,9 @@ import java.util.Date;
 
 /**
  * File 类的一个对象，代表一个文件或一个文件目录
- *
+ * file类都是对文件或者文件目录的创建，删除，以及文件属性的设置和获取；
+ * 没有设计到文件的内容
+ * 后续file类经常作为参数传递到流的构造器中
  */
 public class FileTest {
 
@@ -24,6 +26,7 @@ public class FileTest {
         // 相对路径
         // 绝对路径
         // 分隔符的问题 File.separator
+        // 以下都是内存层面的对象
         // 构造器1
         File file = new File("hello.txt");// 相对于module
         File file1 = new File("C:\\Users\\24201\\Desktop\\vue课程设计\\springboot_狂神\\java_test\\hello1.txt");
@@ -110,6 +113,9 @@ public class FileTest {
     }
     @Test
     public void test7(){
+        // 文件目录的创建
+        // mkdir();
+        // mkdirs(); 可以一次创建多层目录
         System.out.println("======");
     }
 }
